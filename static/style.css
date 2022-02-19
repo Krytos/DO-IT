@@ -1,0 +1,153 @@
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    /* background-color: darkslategray;  */
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    padding: 0;
+}
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.navbar__logo{
+    margin: auto;
+    margin-left: 25px;
+}
+
+.navbar__navigation{
+    list-style: none;
+    display: flex;
+}
+
+.navbar__navigation-item{
+    margin: auto 15px;
+}
+
+.navbar__navigation-link{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar__navigation-link:hover{
+    text-decoration: none;
+    color: #0170B9;
+}
+
+#main{
+    margin: 0 auto;
+    background-image: url("/static/media/background.jpeg");
+    background-position: top center;
+    background-attachment:scroll;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 300vh;
+    align-items: center;
+}
+
+.background{
+    height: 75vh;
+}
+
+.text_1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: white;
+    height: 45vh;
+    padding-top: 25px;
+}
+
+.text_1__div{
+    width: 30%;
+    margin-right: 15px
+}
+
+.text_1__h1{
+    line-height: 150%;
+    margin-top: -5px;
+}
+
+.text_1__p1{
+    line-height: 200%;
+    font-size: 14px;
+}
+
+.text_1__p1-link{
+    text-decoration: none;
+    color: #0170B9;
+}
+
+.text_1__img{
+    height: fit-content;
+    width: 30%;
+    margin-left: 15px;
+}
+
+.text_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+    background: rgb(29,148,104);
+    background: linear-gradient(45deg, rgba(29,148,104,1) 0%, rgba(22,150,147,1) 100%);
+    color: white;
+}
+
+.text_2__div{
+    width: 30%;
+    margin-right: 20px;
+}
+
+.text_2__p1{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.text_2__h1{
+    line-height: 150%;
+}
+
+.text_2__p2{
+    line-height: 150%;
+}
+
+.text_2__buttons{
+    width: 25%;
+    margin-left: 100px;
+}
+
+.text_2__button{
+    background-color: #0170B9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 40%;
+}
+
+.text_2__button:hover{
+    background-color: grey;
+}
+
+#button2{
+    width: 25%;
+}

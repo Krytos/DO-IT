@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Beratungsantrag{% endblock %}
+{% block main %}
+    {% macro input(value, type, text) %}
+        <div class="form-check">
+            <input class="form-check-input" type="{{ type }}" name="input" id="{{ value }}" value="{{ value }}">
+            <label class="form-check-label" for="{{ value }}">
+                {{ text }}
+            </label>
+        </div>
+    {% endmacro %}
+<div class="form__background">
+        <h1 class="h1">{{ question }} {# - id: {{ q_id }} #}</h1>
+        <form class="form__" method="post" novalidate>
+        {% if form_type == "radio" or form_type == "checkbox" %}
+            <ul class="form__list">
+            {% for a in answer %}
+                <li class="form__list-item">
+                    {{ input(a[1], form_type, a[0]) }}
+{#                    {{ a[1] }}#}
+                </li>
+            {% endfor %}
+{#                <input type="hidden" name="input" value="{{ q_id }}">#}
+            </ul>
+        {% elif form_type == "text" %}
+            <ul class="form__list">
+            <label for="wohneinheiten" class="form-label">{{ alt }}</label>
+            <input type="text" name="text" class="form-control" id="wohneinheiten" placeholder="1-100">
+            <input type="hidden" name="input" value="{{ q_id }}">
+            </ul>
+        {% elif form_type == "cal" %}
+            <ul class="form__list">
+            <label for="termin" class="form-label">{{ alt }}</label>
+            <input type="date" name="text" class="form-control" id="termin">
+            <input type="hidden" name="input" value="{{ q_id }}">
+            </ul>
+        {% elif form_type == "file" %}
+            <ul class="form__list">
+            <div class="input-group mb-3">
+            <label for="termin" class="form-label">{{ alt }}</label>
+            <input type="file" name="input" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Hochladen</label>
+            </div>
+{#            <input type="hidden" name="next_q" value="{{ answer_id }}">#}
+            </ul>
+        {% elif form_type == "alt" %}
+             <ul class="form__list">
+                <li class="form__list-item form-check-label alt__Text">
+                    {{ alt|safe }}
+                </li>
+             </ul>
+        {% else %}
+            {{ form.hidden_tag() }}
+            <div class="contact__form">
+                <div class="contact__form-small">
+                     <p>
+                        {{ form.vorname.label(class="login__label") }}<br>
+                        {{ form.vorname(class="login__username", size=32) }} <br>
+                        {% for error in form.vorname.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                        {{ form.nachname.label(class="login__label") }}<br>
+                        {{ form.nachname(class="login__username", size=32) }} <br>
+                        {% for error in form.nachname.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.email.label(class="login__label") }}<br>
+                        {{ form.email(class="login__username", size=32) }} <br>
+                        {% for error in form.email.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                        {{ form.tel.label(class="login__label") }}<br>
+                        {{ form.tel(class="login__username", size=32) }} <br>
+                        {% for error in form.tel.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class="add_info">
+                    {{ form.add_info.label(class="login__label") }}<br>
+                    {{ form.add_info(class="add_info-textarea") }}
+                    {% for error in form.add_info.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                    <p class="login__label tel">Gerne können Sie sich auch persönlich bei mir melden:
+                        <a href="tel:017656831071">0176/56831071</a></p>
+                </div>
+                <div class="form__alex">
+                    <img class="form__alex-pic" src="/static/media/alex.jpg" alt="Alex Feller, Energieberater"><br>
+                </div>
+            </div>
+            {{ form.submit(class="btn btn-primary abschicken") }}
+            {% block form %}
+            {% endblock %}
+        {% endif %}
+        <div class="form__buttons">
+            {% if q_id != 0 and form_type != "contact" and form_type != "alt" %}
+                <button name="input" value="{{ back[-2] }}" class="btn btn-primary" type="submit">Zurück</button>
+            {% endif %}
+            {% if form_type != "contact" and form_type != "alt" %}
+                <button class="btn btn-primary" type="submit">Weiter</button>
+            {% endif %}
+        </div>
+        </form>
+</div>
+{% endblock %}

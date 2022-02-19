@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Admin Panel{% endblock %}
+{% block main %}
+    <div class="form__background login">
+        <div class="error_message">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <h1 class="login__label">Sign In</h1>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label(class="login__label") }}<br>
+                {{ form.username(class="login__username", size=32) }} <br>
+                {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password.label(class="login__label") }}<br>
+                {{ form.password(class="login__password", size=32) }} <br>
+                {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.remember_me() }} {{ form.remember_me.label(class="login__label") }}</p>
+            <p>{{ form.submit(class="btn btn-primary") }}</p>
+        </form>
+    </div>
+{% endblock %}
