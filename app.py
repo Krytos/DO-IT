@@ -8,7 +8,7 @@ load_dotenv()
 
 app = Flask(__name__)  # Weißt Flask der variable app zu
 app.config.from_object(Config)  # Teilt Flask mit, dass die Config Optionen sich im Objekt Config.py befinden
-app.db = Config.client.doit  # Weißt der Variable app.db die URI für die Datenbank zu
+app.db = Config.client.feller  # Weißt der Variable app.db die URI für die Datenbank zu
 db = MongoEngine(app)  # Initiert Mongoengine
 question_answer = {"Name": "",}  # Dictionary welches Frage + Antwort enthalten wird.
 back = []  # Liste für die Back Taste
@@ -68,7 +68,6 @@ def forms():  # Funktion welche Antworten den Fragen zuordnet und diese dann in 
     question_id = request.form.get("input", type=int)
     if question_id is None:
         question_id = 0
-    print(question_id, question_answer)
     if 1121 < question_id < 1127:
         question_id = 1121
     if question_id == 21 and q in question_answer:
