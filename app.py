@@ -1,8 +1,8 @@
 from dotenv import load_dotenv
-from flask import Flask, render_template, request, redirect, url_for, session
-from config import Config
+from flask import Flask, render_template, request
 from flask_mongoengine import MongoEngine
 
+from config import Config
 
 load_dotenv()
 

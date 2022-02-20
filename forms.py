@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
+from wtforms import RadioField, SelectMultipleField, FileField
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, EmailField, TelField, TextAreaField
-from wtforms import RadioField, SelectMultipleField, FileField, DateTimeLocalField
 from wtforms.validators import DataRequired
 
 
@@ -19,9 +19,3 @@ class ContactForm(FlaskForm):
     add_info = TextAreaField("Weitere Infos:")
     file = FileField()
     submit = SubmitField('Abschicken')
-
-
-class Fragebogen(FlaskForm):
-    radio = RadioField(choices= [("1", "hure"), ("2", "nutte"),], validators=[DataRequired()])
-    check = SelectMultipleField(validators=[DataRequired()])
-    text = StringField(validators=[DataRequired()])

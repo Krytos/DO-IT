@@ -60,7 +60,7 @@ def beratung(self, text):
 # TODO: Redirect /admin to login, if user is not logged in.
 
 @app.route('/login/', methods=['GET', 'POST'])
-def login(**kwargs):
+def login():
     if "user" in session:
         return redirect("/admin/")
     form = LoginForm()
