@@ -1,0 +1,9 @@
+.env
+Do-IT.7z
+.idea
+__pycache__
+log.text
+package-lock.json
+package.json
+poetry.lock
+pyproject.toml
