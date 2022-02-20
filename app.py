@@ -91,4 +91,5 @@ def forms():  # Funktion welche Antworten den Fragen zuordnet und diese dann in 
   # Initiert Flask
 
 if __name__ == '__main__':
-    app.run()
+    def app_create():
+        app.run()
