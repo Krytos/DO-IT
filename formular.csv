@@ -1,0 +1,8 @@
+_id,answer_id,answers,question,question_id
+61fa5d3a0d3e54f07e19b06e,"[""1"",""2"",""3""]","[""Ich möchte eine Förderung für eine Einzelmaßnahme erhalten"",""Ich möchte eine Energieberatung für mein Wohngebäude in Form eines iSFP´s erhalten"",""Ich möchte eine Heizlastberechnung anfragen""]",Was möchten Sie angeboten bekommen?,0
+61faa7c80d3e54f07e19b06f,"[""11"",""12""]","[""Ich möchte sofort eine Förderung beantragen"",""Ich habe Zeit und möchte mehr Förderung erhalten""]",Wie schnell benötigen Sie die Förderung?,1
+61faa8350d3e54f07e19b070,"[""111"",""112"",""113"",""114"",""115"",""116"",""117"",""118"",""119""]","[""Gesamtsanierung zu einem Effizienzhaus"",""Fassade"",""Dach"",""Fenster"",""Kellerdecke"",""Heizung"",""Anlagentechnik"",""Heizungsoptimierung"",""Photovoltaik""]",Ich möchte Förderung für folgende Maßnahme erhalten:,11
+61faab0b0d3e54f07e19b071,[],[],Bitte kontaktieren Sie mich direkt per Mail oder Telefon für ein Beratungsgespräch,111
+61fab4780d3e54f07e19b072,"[""121"",""122""]","[""Mit einem individuellen Sanierungsfahrplan (iSFP) erhalten Sie einen 5% Förderbonus. Die Bearbeitung dauert etwas länger bis der Antrag gestellt werden kann. "",""Handelt es sich um ein Wohngebäude?""]",Einen individuellen Sanierungsfahrplan anfragen,12
+61fb9716226155f3e38a5de8,"[""21"",""22""]","[""Ja"",""Nein""]",Handelt es sich um ein Wohngebäude?,2
+61fb97aa226155f3e38a5de9,"[""31"",""32""]","[""Wohneinheiten:"",""Wohnfläche:""]",Wieviel Wohneinheiten und Wohnfläce hat das Haus?,3

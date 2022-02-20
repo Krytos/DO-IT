@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "620e7ad5b3868c83dda835aa"
+  },
+  "Was möchten Sie angeboten bekommen?": "Ich möchte eine Förderung für eine Einzelmaßnahme erhalten",
+  "Wie schnell benötigen Sie die Förderung?": "Ich möchte sofort eine Förderung beantragen",
+  "Ich möchte die Förderung direkt beantragen": "Gesamtsanierung zu einem Effizienzhaus"
+},{
+  "_id": {
+    "$oid": "620e7afd2e693abe7ca4d56d"
+  },
+  "Was möchten Sie angeboten bekommen?": "Ich möchte eine Förderung für eine Einzelmaßnahme erhalten",
+  "Wie schnell benötigen Sie die Förderung?": "Ich möchte sofort eine Förderung beantragen",
+  "Ich möchte die Förderung direkt beantragen": "Gesamtsanierung zu einem Effizienzhaus"
+},{
+  "_id": {
+    "$oid": "620e7b5e5aa63340941bbfa0"
+  },
+  "Was möchten Sie angeboten bekommen?": "Ich möchte eine Förderung für eine Einzelmaßnahme erhalten",
+  "Wie schnell benötigen Sie die Förderung?": "Ich möchte sofort eine Förderung beantragen",
+  "Ich möchte die Förderung direkt beantragen": "Gesamtsanierung zu einem Effizienzhaus"
+},{
+  "_id": {
+    "$oid": "620e7beb6b72f982d0d91e4a"
+  },
+  "Was möchten Sie angeboten bekommen?": "Ich möchte eine Förderung für eine Einzelmaßnahme erhalten",
+  "Wie schnell benötigen Sie die Förderung?": "Ich möchte sofort eine Förderung beantragen",
+  "Ich möchte die Förderung direkt beantragen": "Gesamtsanierung zu einem Effizienzhaus"
+},{
+  "_id": {
+    "$oid": "620e7c544214315501b2df57"
+  },
+  "Was möchten Sie angeboten bekommen?": "Ich möchte eine Förderung für eine Einzelmaßnahme erhalten",
+  "Wie schnell benötigen Sie die Förderung?": "Ich möchte sofort eine Förderung beantragen",
+  "Ich möchte die Förderung direkt beantragen": "Gesamtsanierung zu einem Effizienzhaus"
+},{
+  "_id": {
+    "$oid": "620e7cd84c285c621c245553"
+  },
+  "Was möchten Sie angeboten bekommen?": "Ich möchte eine Förderung für eine Einzelmaßnahme erhalten",
+  "Wie schnell benötigen Sie die Förderung?": "Ich möchte sofort eine Förderung beantragen",
+  "Ich möchte die Förderung direkt beantragen": "Gesamtsanierung zu einem Effizienzhaus",
+  "Name": [
+    "Kevin",
+    "Meinon"
+  ]
+},{
+  "_id": {
+    "$oid": "620e7cf4fb0830f141c277f7"
+  },
+  "Was möchten Sie angeboten bekommen?": "Ich möchte eine Förderung für eine Einzelmaßnahme erhalten",
+  "Wie schnell benötigen Sie die Förderung?": "Ich möchte sofort eine Förderung beantragen",
+  "Ich möchte die Förderung direkt beantragen": "Gesamtsanierung zu einem Effizienzhaus",
+  "Name": [
+    "Kevin",
+    "Miller"
+  ]
+},{
+  "_id": {
+    "$oid": "620e7d098c923b6b642dfc44"
+  },
+  "Was möchten Sie angeboten bekommen?": "Ich möchte eine Förderung für eine Einzelmaßnahme erhalten",
+  "Wie schnell benötigen Sie die Förderung?": "Ich möchte sofort eine Förderung beantragen",
+  "Ich möchte die Förderung direkt beantragen": "Gesamtsanierung zu einem Effizienzhaus",
+  "Name": [
+    "Kevin",
+    "Miller"
+  ]
+}]
