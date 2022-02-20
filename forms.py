@@ -4,14 +4,14 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, Email
 from wtforms.validators import DataRequired
 
 
-class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
+class LoginForm(FlaskForm):  # Das Formular für das Login Fenster
+    username = StringField('Username', validators=[DataRequired()])  # Validators um leeres Feld zu verhindern
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
 
 
-class ContactForm(FlaskForm):
+class ContactForm(FlaskForm):  # Kontaktformular
     vorname = StringField("Vorname", validators=[DataRequired()])
     nachname = StringField("Nachname", validators=[DataRequired()])
     email = EmailField("E-Mail", validators=[DataRequired()])

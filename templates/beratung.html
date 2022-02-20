@@ -1,7 +1,7 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {# Erweitert das base template aus base.html #}
 {% block title %}Beratungsantrag{% endblock %}
 {% block main %}
-    {% macro input(value, type, text) %}
+    {% macro input(value, type, text) %} {# Erstellt ein Macro für die formularfelcer radio und checkbox #}
         <div class="form-check">
             <input class="form-check-input" type="{{ type }}" name="input" id="{{ value }}" value="{{ value }}">
             <label class="form-check-label" for="{{ value }}">
@@ -10,31 +10,30 @@
         </div>
     {% endmacro %}
 <div class="form__background">
-        <h1 class="h1">{{ question }} {# - id: {{ q_id }} #}</h1>
+        <h1 class="h1">{{ question }}</h1> {# Variable für die aktuelle Frage #}
         <form class="form__" method="post" novalidate>
-        {% if form_type == "radio" or form_type == "checkbox" %}
+        {% if form_type == "radio" or form_type == "checkbox" %} {# Prüft ob radio oder chekbox #}
             <ul class="form__list">
             {% for a in answer %}
                 <li class="form__list-item">
-                    {{ input(a[1], form_type, a[0]) }}
-{#                    {{ a[1] }}#}
+                    {{ input(a[1], form_type, a[0]) }} {# Nutzt das macro um die Antwort Felder zu erzeugen #}
                 </li>
             {% endfor %}
-{#                <input type="hidden" name="input" value="{{ q_id }}">#}
             </ul>
-        {% elif form_type == "text" %}
+        {% elif form_type == "text" %} {# Formular für Text felder #}
             <ul class="form__list">
             <label for="wohneinheiten" class="form-label">{{ alt }}</label>
             <input type="text" name="text" class="form-control" id="wohneinheiten" placeholder="1-100">
-            <input type="hidden" name="input" value="{{ q_id }}">
+            <input type="hidden" name="input" value="{{ q_id }}"> {# Hidden gibt frage ID zurück, da die antworrt
+            nicht genutzt werden kann um die nächste Frage zu bestimmtn. #}
             </ul>
-        {% elif form_type == "cal" %}
+        {% elif form_type == "cal" %} {# Kalender Feld. Hier gilt das selbe wie beim Text Feld #}
             <ul class="form__list">
             <label for="termin" class="form-label">{{ alt }}</label>
             <input type="date" name="text" class="form-control" id="termin">
             <input type="hidden" name="input" value="{{ q_id }}">
             </ul>
-        {% elif form_type == "file" %}
+        {% elif form_type == "file" %} {# Dateiupload für zukünftige upgrades #}
             <ul class="form__list">
             <div class="input-group mb-3">
             <label for="termin" class="form-label">{{ alt }}</label>
@@ -43,20 +42,20 @@
             </div>
 {#            <input type="hidden" name="next_q" value="{{ answer_id }}">#}
             </ul>
-        {% elif form_type == "alt" %}
+        {% elif form_type == "alt" %} {# Alternative für einträge im Formualr die keine Antwort haben #}
              <ul class="form__list">
                 <li class="form__list-item form-check-label alt__Text">
-                    {{ alt|safe }}
+                    {{ alt|safe }} {# Deaktiviert das formatieren von HTML tags wie <a> zu strings #}
                 </li>
              </ul>
         {% else %}
-            {{ form.hidden_tag() }}
+            {{ form.hidden_tag() }} {# Kontaktformular. Hidden tag wird für die validation genutzt #}
             <div class="contact__form">
                 <div class="contact__form-small">
                      <p>
                         {{ form.vorname.label(class="login__label") }}<br>
                         {{ form.vorname(class="login__username", size=32) }} <br>
-                        {% for error in form.vorname.errors %}
+                        {% for error in form.vorname.errors %} {# Error nachricht, falls was fehlt #}
                         <span style="color: red;">[{{ error }}]</span>
                         {% endfor %}
                         {{ form.nachname.label(class="login__label") }}<br>
@@ -97,8 +96,10 @@
         {% endif %}
         <div class="form__buttons">
             {% if q_id != 0 and form_type != "contact" and form_type != "alt" %}
+                 {# Prüft ob ein back button sinn macht und weißt dem button den richtigen wert von der back liste zu #}
                 <button name="input" value="{{ back[-2] }}" class="btn btn-primary" type="submit">Zurück</button>
             {% endif %}
+            {# Prüft ob ein weiter button sinn macht #}
             {% if form_type != "contact" and form_type != "alt" %}
                 <button class="btn btn-primary" type="submit">Weiter</button>
             {% endif %}
